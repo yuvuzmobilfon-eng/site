@@ -249,7 +249,7 @@ body {
 }
 
 .nav-logo .logo-img {
-    height: 90px;
+    height: 85px;
     width: auto;
     transition: var(--transition-base);
 }
