@@ -745,9 +745,45 @@ section {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: 1fr; 
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
+
+/* 2. SADECE NORMAL KARTLARI YATAY YAP (FEATURED OLMAYANLAR) */
+@media (min-width: 768px) {
+    /* Featured sınıfına sahip OLMAYAN kartları yatay yapıyoruz */
+    .service-card:not(.featured) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .service-card:not(.featured) .service-icon {
+        margin-bottom: 0 !important;
+        flex-shrink: 0;
+        font-size: 80px; /* Yatayda ikonu biraz daha belirgin yapabiliriz */
+    }
+}
+
+/* 3. FEATURED KARTIN DÜZENİNİ KORU VE İYİLEŞTİR */
+.service-card.featured {
+    grid-column: 1 / -1; /* Her zaman tam genişlik */
+    display: block;      /* Flex'i burada devre dışı bırakıyoruz ki içindeki alt grid (phases) bozulmasın */
+    width: 100%;
+}
+
+/* Featured kart içindeki alt fazların (phases) yatayda yayılması için */
+.service-phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
 
 .service-card {
     background: white;
