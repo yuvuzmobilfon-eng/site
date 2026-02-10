@@ -909,6 +909,22 @@ section {
     z-index: 10;
 }
 
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.service-header .service-icon {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.service-header h3 {
+    margin-bottom: 0;
+}
+
 .service-icon {
     font-size: 64px;
     margin-bottom: 24px;
