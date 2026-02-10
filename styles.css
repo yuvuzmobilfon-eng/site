@@ -20,7 +20,7 @@
     --primary-300: #93c5fd;
     --primary-200: #bfdbfe;
     --primary-100: #dbeafe;
-    
+
     /* Neutrals */
     --gray-900: #0f172a;
     --gray-800: #1e293b;
@@ -32,19 +32,19 @@
     --gray-200: #e2e8f0;
     --gray-100: #f1f5f9;
     --gray-50: #f8fafc;
-    
+
     /* Accent Colors */
     --accent-gold: #fbbf24;
     --accent-green: #10b981;
     --accent-purple: #8b5cf6;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
     --gradient-primary-hover: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
     --gradient-dark: linear-gradient(135deg, #0c1e47 0%, #1e3a8a 50%, #2563eb 100%);
     --gradient-light: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
     --gradient-overlay: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.9) 100%);
-    
+
     /* Shadows */
     --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
@@ -53,13 +53,13 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-    
+
     /* Transitions */
     --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
@@ -67,7 +67,7 @@
     --radius-xl: 24px;
     --radius-2xl: 32px;
     --radius-full: 9999px;
-    
+
     /* Spacing */
     --spacing-xs: 8px;
     --spacing-sm: 12px;
@@ -249,7 +249,7 @@ body {
 }
 
 .nav-logo .logo-img {
-    height: 75px;
+    height: 55px;
     width: auto;
     transition: var(--transition-base);
 }
@@ -363,7 +363,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(147, 197, 253, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 40% 20%, rgba(30, 58, 138, 0.15) 0%, transparent 50%);
@@ -377,33 +377,44 @@ body {
     height: 200%;
     top: -50%;
     left: -50%;
-    background: 
-        repeating-linear-gradient(
-            90deg,
+    background:
+        repeating-linear-gradient(90deg,
             transparent,
             transparent 2px,
             rgba(96, 165, 250, 0.03) 2px,
-            rgba(96, 165, 250, 0.03) 4px
-        ),
-        repeating-linear-gradient(
-            0deg,
+            rgba(96, 165, 250, 0.03) 4px),
+        repeating-linear-gradient(0deg,
             transparent,
             transparent 2px,
             rgba(96, 165, 250, 0.03) 2px,
-            rgba(96, 165, 250, 0.03) 4px
-        );
+            rgba(96, 165, 250, 0.03) 4px);
     animation: moveGrid 30s linear infinite;
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -30px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
 }
 
 @keyframes moveGrid {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
 }
 
 .hero-container {
@@ -424,6 +435,7 @@ body {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -447,8 +459,17 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.9; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
 }
 
 .hero-title {
@@ -559,9 +580,22 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-15px); }
-    60% { transform: translateX(-50%) translateY(-8px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-8px);
+    }
 }
 
 .mouse {
@@ -584,8 +618,15 @@ body {
 }
 
 @keyframes scroll {
-    0% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(15px); }
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
 }
 
 /* ================================
@@ -745,7 +786,7 @@ section {
 
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -754,25 +795,24 @@ section {
 
 /* 2. SADECE NORMAL KARTLARI YATAY YAP (FEATURED OLMAYANLAR) */
 @media (min-width: 768px) {
-    /* Featured sınıfına sahip OLMAYAN kartları yatay yapıyoruz */
+
+    /* Featured sınıfına sahip OLMAYAN kartları düzenle */
     .service-card:not(.featured) {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 40px;
+        display: block;
     }
 
     .service-card:not(.featured) .service-icon {
-        margin-bottom: 0 !important;
-        flex-shrink: 0;
-        font-size: 80px; /* Yatayda ikonu biraz daha belirgin yapabiliriz */
+        margin-bottom: 24px;
+        font-size: 64px;
     }
 }
 
 /* 3. FEATURED KARTIN DÜZENİNİ KORU VE İYİLEŞTİR */
 .service-card.featured {
-    grid-column: 1 / -1; /* Her zaman tam genişlik */
-    display: block;      /* Flex'i burada devre dışı bırakıyoruz ki içindeki alt grid (phases) bozulmasın */
+    grid-column: 1 / -1;
+    /* Her zaman tam genişlik */
+    display: block;
+    /* Flex'i burada devre dışı bırakıyoruz ki içindeki alt grid (phases) bozulmasın */
     width: 100%;
 }
 
@@ -844,8 +884,13 @@ section {
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .featured-badge {
@@ -894,6 +939,33 @@ section {
     list-style: none;
     position: relative;
     z-index: 10;
+}
+
+/* Desktop: Display features side by side */
+@media (min-width: 768px) {
+    .service-features {
+        display: flex;
+        gap: 24px;
+        justify-content: space-between;
+    }
+
+    .service-features li {
+        flex: 1;
+        border-bottom: none;
+        border-right: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 16px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .service-features li:last-child {
+        border-right: none;
+    }
+
+    .service-features li:hover {
+        padding-left: 0;
+        transform: translateY(-2px);
+    }
 }
 
 .service-features li {
@@ -1154,8 +1226,13 @@ section {
 }
 
 @keyframes movePattern {
-    from { transform: translate(0, 0); }
-    to { transform: translate(30px, 30px); }
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(30px, 30px);
+    }
 }
 
 .commercial-models h3 {
@@ -1228,7 +1305,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     animation: pulse 8s ease-in-out infinite;
@@ -1286,7 +1363,7 @@ section {
     letter-spacing: -1px;
 }
 
-.contact-info > p {
+.contact-info>p {
     font-size: 18px;
     color: var(--gray-600);
     line-height: 1.8;
@@ -1519,21 +1596,22 @@ section {
     .nav-menu {
         gap: 32px;
     }
-    
+
     .hero-stats {
         gap: 60px;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .service-card.featured {
         grid-column: auto;
     }
 }
 
 @media (max-width: 768px) {
+
     /* Navigation */
     .nav-menu {
         position: fixed;
@@ -1549,130 +1627,131 @@ section {
         transition: var(--transition-base);
         gap: 24px;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-link {
         font-size: 18px;
         padding: 16px 0;
         width: 100%;
         text-align: center;
     }
-    
+
     .nav-cta {
         display: none;
     }
-    
+
     .hamburger {
         display: flex;
     }
-    
+
     /* Hero */
     .hero {
         min-height: auto;
         padding: 140px 0 100px;
     }
-    
+
     .hero-stats {
         gap: 40px;
     }
-    
+
     .hero-cta {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .hero-cta .btn {
         width: 100%;
     }
-    
+
     /* Sections */
     section {
         padding: 80px 0;
     }
-    
+
     .section-header {
         margin-bottom: 60px;
     }
-    
+
     /* Services */
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .service-phases {
         grid-template-columns: 1fr;
     }
-    
+
     /* Benefits */
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-    
+
     /* Partners */
     .partners-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .commercial-models {
         padding: 48px 32px;
     }
-    
+
     /* Contact */
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
+
     .contact-form {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form-wrapper {
         padding: 40px 32px;
     }
-    
+
     /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     /* CTA */
     .cta-buttons {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .cta-buttons .btn {
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+
     .services-grid,
     .benefits-grid,
     .partners-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .service-card,
     .benefit-card,
     .partner-card {
         padding: 32px;
     }
-    
+
     .contact-form-wrapper {
         padding: 32px 24px;
     }
-    
+
     .commercial-models {
         padding: 40px 24px;
     }
@@ -1687,8 +1766,13 @@ section {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .slide-up {
@@ -1700,6 +1784,7 @@ section {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1724,13 +1809,14 @@ body.loaded {
    ================================ */
 
 @media print {
+
     .navbar,
     .hamburger,
     .scroll-indicator,
     .cta-section {
         display: none;
     }
-    
+
     section {
         page-break-inside: avoid;
     }
